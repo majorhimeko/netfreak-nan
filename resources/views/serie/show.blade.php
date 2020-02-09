@@ -11,10 +11,11 @@
     <ul>
         @foreach($serie->episodes as $episode)
         <li>
-            <a href="#">{{ $episode->title }}</a>
+            <a href="{{ url('/episodes/'. $episode->id)}}">{{ $episode->title }}</a>
         </li>
         @endforeach
 
     </ul>
+    <a class="btn btn-info" href="{{ url('/series') }}" >กลับ</a>
  </div>
 @endsection
